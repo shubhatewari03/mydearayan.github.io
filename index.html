@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ayanu 💗</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Pacifico&family=Poppins:wght@300;400;500;600&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+min-height:100vh;
+font-family:'Poppins',sans-serif;
+background:
+radial-gradient(circle at 15% 20%,rgba(255,255,255,.7),transparent 25%),
+radial-gradient(circle at 85% 80%,rgba(255,255,255,.5),transparent 25%),
+linear-gradient(135deg,#ffd6ec,#c9e9ff,#e6d5ff);
+display:flex;justify-content:center;align-items:center;
+overflow-x:hidden;padding:25px;color:#555
+}
+
+.heart{
+position:fixed;bottom:-50px;font-size:25px;
+animation:floatUp 6s linear infinite;opacity:.7;
+pointer-events:none;z-index:0
+}
+@keyframes floatUp{
+0%{transform:translateY(0) rotate(0);opacity:0}
+20%{opacity:1}
+100%{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+.login-box{
+width:360px;padding:40px;border-radius:30px;
+background:rgba(255,255,255,.38);
+backdrop-filter:blur(15px);
+box-shadow:0 20px 50px rgba(100,70,150,.2);
+text-align:center;border:1px solid rgba(255,255,255,.6);
+animation:appear 1.2s ease;position:relative;z-index:2
+}
+@keyframes appear{
+from{opacity:0;transform:translateY(30px) scale(.9)}
+to{opacity:1;transform:translateY(0) scale(1)}
+}
+.login-box h1{
+font-family:'Pacifico',cursive;font-size:38px;color:#d94f91;
+margin-bottom:10px
+}
+.subtitle{font-size:14px;margin-bottom:25px}
+#codeDisplay{
+height:50px;margin-bottom:20px;font-size:25px;
+letter-spacing:10px;color:#527bb5
+}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.keypad button{
+border:none;padding:15px;border-radius:15px;
+background:rgba(255,255,255,.65);font-size:18px;
+cursor:pointer;transition:.2s;color:#555
+}
+.keypad button:hover{transform:translateY(-3px) scale(1.05);background:white}
+.enter{
+grid-column:span 3;
+background:linear-gradient(90deg,#ff8fc7,#8bcaff)!important;
+color:white!important;font-weight:600
+}
+#message{margin-top:15px;color:#d94f91;font-size:14px;min-height:20px}
+
+#mainWebsite{
+display:none;position:relative;width:95%;max-width:900px;
+min-height:650px;padding:70px 40px;text-align:center;
+border-radius:40px;background:rgba(255,255,255,.3);
+backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.55);
+box-shadow:0 25px 70px rgba(100,70,160,.2);
+animation:homeAppear 1s ease;overflow:hidden;z-index:2
+}
+@keyframes homeAppear{
+from{opacity:0;transform:scale(.85) translateY(30px)}
+to{opacity:1;transform:scale(1) translateY(0)}
+}
+.tiny-title{
+color:#668bc4;font-size:14px;letter-spacing:4px;
+text-transform:uppercase;margin-bottom:20px
+}
+#mainWebsite h2{
+font-family:'Pacifico',cursive;font-size:clamp(45px,7vw,75px);
+line-height:1.15;color:#d9579a
+}
+#mainWebsite h2 span{color:#6699d1}
+.home-text{margin-top:25px;font-size:16px;line-height:1.8}
+.from{
+margin-top:10px;font-family:'Pacifico',cursive;
+font-size:23px;color:#d9579a
+}
+
+.menu{
+margin:45px auto 25px;display:flex;justify-content:center;
+flex-wrap:wrap;gap:18px;max-width:750px
+}
+.menu button{
+width:175px;height:105px;border:none;border-radius:25px;
+background:rgba(255,255,255,.55);
+box-shadow:0 8px 20px rgba(100,80,150,.12);
+cursor:pointer;font-family:'Poppins',sans-serif;
+font-size:28px;transition:.3s ease
+}
+.menu button span{display:block;margin-top:8px;font-size:13px;color:#555}
+.menu button:hover{
+transform:translateY(-10px) rotate(1deg);
+background:rgba(255,255,255,.9);
+box-shadow:0 18px 30px rgba(100,80,150,.2)
+}
+.bottom-text{margin-top:25px;font-size:11px;color:#777;letter-spacing:1px}
+
+.sparkle{
+position:absolute;color:white;font-size:30px;
+animation:sparkleFloat 4s ease-in-out infinite;
+pointer-events:none
+}
+.sparkle1{top:12%;left:10%}
+.sparkle2{top:20%;right:12%;animation-delay:1s}
+.sparkle3{bottom:15%;left:15%;animation-delay:2s}
+.sparkle4{bottom:20%;right:10%;animation-delay:3s}
+@keyframes sparkleFloat{
+0%,100%{transform:translateY(0) rotate(0);opacity:.5}
+50%{transform:translateY(-15px) rotate(20deg);opacity:1}
+}
+
+.hiddenSection{
+display:none;width:95%;max-width:900px;
+animation:sectionAppear .7s ease;position:relative;z-index:2
+}
+@keyframes sectionAppear{
+from{opacity:0;transform:translateY(30px) scale(.95)}
+to{opacity:1;transform:translateY(0) scale(1)}
+}
+.sectionCard{
+padding:40px 30px;border-radius:35px;
+background:rgba(255,255,255,.55);backdrop-filter:blur(20px);
+border:2px solid rgba(255,255,255,.7);
+box-shadow:0 25px 70px rgba(100,80,160,.2);text-align:center
+}
+.sectionCard h2{
+font-family:'Pacifico',cursive;font-size:clamp(38px,6vw,60px);
+color:#d9579a;margin:10px 0 20px
+}
+.sectionSubtitle{
+color:#668bc4;font-size:13px;letter-spacing:2px;margin-bottom:25px
+}
+.backButton{
+margin-bottom:20px;padding:10px 20px;border:none;border-radius:20px;
+background:rgba(255,255,255,.75);color:#668bc4;
+font-family:'Poppins',sans-serif;cursor:pointer;transition:.3s
+}
+.backButton:hover{transform:translateX(-5px);background:white}
+
+/* LETTER */
+.letterIntro{font-family:'Caveat',cursive;font-size:22px;color:#9b6b83;margin-bottom:18px}
+.letterPaper{
+position:relative;max-height:620px;overflow-y:auto;
+padding:55px;text-align:left;
+background:linear-gradient(rgba(255,250,240,.96),rgba(255,248,235,.96));
+border-radius:4px;box-shadow:0 18px 35px rgba(90,60,70,.16);
+border:1px solid rgba(190,150,160,.3);
+line-height:1.95;font-family:'Caveat',cursive;font-size:21px;
+transform:rotate(-.25deg)
+}
+.letterPaper:before{
+content:"";position:absolute;inset:0;pointer-events:none;
+background:repeating-linear-gradient(to bottom,transparent 0,transparent 34px,rgba(150,180,210,.14) 35px)
+}
+.letterPaper:after{
+content:"♡";position:absolute;top:18px;right:28px;font-size:35px;
+color:#e39ab9;transform:rotate(12deg)
+}
+.letterContent{position:relative;z-index:1}
+.letterDate{text-align:right;color:#9c7c88;font-size:18px;margin-bottom:28px}
+.letterGreeting{font-size:27px;color:#d9579a;margin-bottom:20px}
+.letterParagraph{margin-bottom:23px}
+.letterEnding{
+margin-top:35px;text-align:right;font-size:24px;
+color:#d9579a;line-height:1.7
+}
+.letterPaper::-webkit-scrollbar{width:7px}
+.letterPaper::-webkit-scrollbar-thumb{background:rgba(217,87,154,.35);border-radius:20px}
+
+/* LOVE CARDS */
+.reasonGrid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;margin-top:25px
+}
+.reasonCard{
+padding:25px 15px;border-radius:22px;
+background:rgba(255,255,255,.65);cursor:pointer;
+transition:.3s;color:#555
+}
+.reasonCard:hover{transform:translateY(-7px);background:white}
+.reasonCard .emoji{font-size:30px;margin-bottom:10px}
+
+/* OPEN WHEN */
+.openWhenGrid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px
+}
+.openCard{
+border:none;padding:25px 15px;border-radius:22px;
+background:rgba(255,255,255,.65);cursor:pointer;
+font-family:'Poppins',sans-serif;color:#555;transition:.3s
+}
+.openCard:hover{transform:translateY(-7px) rotate(1deg);background:white}
+.openCard strong{display:block;color:#d9579a;margin-bottom:7px}
+
+/* MODAL */
+.modal{
+display:none;position:fixed;inset:0;background:rgba(50,40,80,.35);
+backdrop-filter:blur(8px);justify-content:center;align-items:center;
+padding:20px;z-index:20
+}
+.modalContent{
+width:90%;max-width:600px;max-height:80vh;overflow-y:auto;
+padding:35px;border-radius:30px;background:rgba(255,255,255,.96);
+text-align:center;box-shadow:0 20px 60px rgba(70,50,120,.3);
+animation:appear .4s ease
+}
+.modalContent h3{
+font-family:'Pacifico',cursive;font-size:35px;color:#d9579a;margin-bottom:20px
+}
+.modalContent p{color:#555;line-height:1.8;margin-bottom:20px;white-space:pre-line}
+.closeButton,.revealButton,.calculateButton{
+border:none;padding:11px 22px;border-radius:20px;
+background:linear-gradient(90deg,#ff8fc7,#8bcaff);
+color:white;cursor:pointer;font-family:'Poppins',sans-serif
+}
+
+/* SONGS */
+.songList{display:flex;flex-direction:column;gap:15px;text-align:left}
+.song{
+padding:20px 25px;border-radius:20px;
+background:rgba(255,255,255,.65);
+transition:.3s
+}
+.song:hover{transform:translateX(6px);background:white}
+.songTitle{font-size:17px;font-weight:600;color:#d9579a}
+.songReason{font-size:13px;color:#668bc4;margin-top:5px}
+
+/* FORMULA */
+.formulaBox{
+margin:25px auto;padding:35px 20px;border-radius:25px;
+background:rgba(255,255,255,.65);font-size:20px;line-height:2.4;
+box-shadow:0 10px 25px rgba(100,80,150,.1)
+}
+.formulaBox span{
+display:inline-block;padding:5px 12px;border-radius:15px;
+background:rgba(255,214,236,.7);color:#d9579a;font-weight:600
+}
+#formulaResult{
+margin-top:20px;font-family:'Caveat',cursive;
+font-size:25px;color:#d9579a;min-height:35px
+}
+
+/* FINAL */
+.secretBox{
+margin-top:25px;padding:35px 25px;border-radius:30px;
+background:rgba(255,255,255,.6)
+}
+.bigHeart{font-size:70px;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.15)}
+}
+.revealButton{margin-top:20px}
+#secretMessage{display:none;margin-top:30px}
+.finalLetter{
+text-align:left;max-width:720px;margin:auto;
+font-family:'Caveat',cursive;font-size:21px;line-height:1.9;color:#51444a
+}
+.finalLetter p{margin-bottom:20px}
+
+@media(max-width:600px){
+body{padding:12px}
+#mainWebsite{padding:50px 18px}
+.sectionCard{padding:30px 15px}
+.letterPaper{padding:40px 25px;font-size:19px}
+.menu button{width:145px;height:95px}
+.finalLetter{font-size:19px}
+.login-box{width:100%;max-width:360px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart" style="left:5%;animation-delay:0s">💗</div>
+<div class="heart" style="left:20%;animation-delay:2s">♡</div>
+<div class="heart" style="left:40%;animation-delay:4s">💖</div>
+<div class="heart" style="left:65%;animation-delay:1s">💕</div>
+<div class="heart" style="left:85%;animation-delay:3s">💗</div>
+
+<!-- LOGIN -->
+<div class="login-box" id="loginBox">
+<h1>For Ayanu 💗</h1>
+<p class="subtitle">A tiny little place made just for you ♡</p>
+
+<div id="codeDisplay">• • • •</div>
+
+<div class="keypad">
+<button onclick="press('1')">1</button>
+<button onclick="press('2')">2</button>
+<button onclick="press('3')">3</button>
+<button onclick="press('4')">4</button>
+<button onclick="press('5')">5</button>
+<button onclick="press('6')">6</button>
+<button onclick="press('7')">7</button>
+<button onclick="press('8')">8</button>
+<button onclick="press('9')">9</button>
+<button onclick="clearCode()">⌫</button>
+<button onclick="press('0')">0</button>
+<button onclick="clearCode()">C</button>
+<button class="enter" onclick="checkCode()">Open 💗</button>
+</div>
+
+<div id="message"></div>
+</div>
+
+
+<!-- HOME -->
+<div id="mainWebsite">
+
+<span class="sparkle sparkle1">✦</span>
+<span class="sparkle sparkle2">✧</span>
+<span class="sparkle sparkle3">✦</span>
+<span class="sparkle sparkle4">✧</span>
+
+<p class="tiny-title">a little something for</p>
+
+<h2>My <span>Ayanu</span> 💗</h2>
+
+<p class="home-text">
+Welcome to this tiny corner of the internet that is basically
+just me putting a ridiculous amount of feelings, memories and
+random thoughts about you in one place. 🥹
+</p>
+
+<p class="from">— your baccha ♡</p>
+
+<div class="menu">
+
+<button onclick="openSection('letter')">
+💌<span>A Letter</span>
+</button>
+
+<button onclick="openSection('love')">
+🫶<span>Things I Love</span>
+</button>
+
+<button onclick="openSection('openwhen')">
+💭<span>Open When...</span>
+</button>
+
+<button onclick="openSection('songs')">
+🎧<span>Our Playlist</span>
+</button>
+
+<button onclick="openSection('formula')">
+🧪<span>The Ayan Formula</span>
+</button>
+
+<button onclick="openSection('surprise')">
+🎁<span>One Last Thing...</span>
+</button>
+
+</div>
+
+<p class="bottom-text">made with an unreasonable amount of love ♡</p>
+</div>
+
+
+<!-- LETTER -->
+<div id="letterSection" class="hiddenSection">
+
+<button class="backButton" onclick="goHome()">← Back</button>
+
+<div class="sectionCard">
+
+<p class="sectionSubtitle">THE ONE I ACTUALLY WROTE FOR YOU</p>
+<h2>A Letter 💌</h2>
+
+<div class="letterIntro">for my favourite bhondu ♡</div>
+
+<div class="letterPaper">
+
+<div class="letterContent">
+
+<div class="letterDate">2026 ♡</div>
+
+<div class="letterGreeting">Dear Ayanu,</div>
+
+<p class="letterParagraph">
+Happiest Boyfriend's Day toooo myyyyyy bhhhonduu, myyy gawaruddin,
+myyy neeeeem ke pakodeeee, myyyy glittery pink wing fairy,
+myyy chatpate mard, myyyyy comfort place, myyy best friend,
+myyy hottie man, myyy favourite Mr. Ragebaiter, myyyyy favourite
+footballer, my boyfieeee, my everything!!!!! MY AYANU!!!!! 💗
+</p>
+
+<p class="letterParagraph">
+6th of April 2026 was the day I first talked to you in the group.
+You asked, “koi match dekh rha hai?” and I replied with “mee no”
+and from there till today, we somehow just never stopped.
+I still sometimes sit and think HOW. Like genuinely kaise?
+Jiss insaan ke naam ke alawa mujhe uske baare mein kuch bhi nahi
+pata tha, that person somehow became one of the most beautiful
+parts of my life. It is honestly so strange to think about how
+normal that first conversation felt at the time. I had absolutely
+no idea that this random boy asking about a match would become
+the person whose messages I would wait for, whose mood I would
+notice, whose smallest changes I would somehow pick up on,
+and whose presence would eventually start feeling so familiar.
+</p>
+
+<p class="letterParagraph">
+You know, I genuinely feel like we are the true example of the
+invisible red string theory. Just in case you don't know sooooo
+it is believed that an invisible red thread connects two people
+who are destined to meet. The thread can stretch, tangle, and make
+two people pass each other without even knowing, but somehow it
+never breaks. And every single time I hear about that theory
+I think of USSSSSSS.
+</p>
+
+<p class="letterParagraph">
+Because seeeeee HOW we lived in the same place for two years
+or maybe even more and still never properly talked, actually
+never talked. We were literally existing in the same little
+world.....crossing paths without even realizing it and somehow
+life waited until March 2026 to finally put us in the same conversation.
+</p>
+
+<p class="letterParagraph">
+And then came 3rd August 2026. Our “just friends” phase officially
+ended and somehow became something so much more beautiful.
+I don't think you realize how naturally you became a part of my
+everyday life. There are so many things I associate with you now.
+Certain songs. Certain jokes. Certain words. Random football things
+I probably wouldn't have cared about before. The stupidest possible
+conversations. Your ragebaiting. Our every moments. My ridiculous
+nicknames for you. The way one random message from you can completely
+change my mood. Even the most ordinary days somehow feel a little
+different when you've been a part of them ✨💖.
+</p>
+
+<p class="letterParagraph">
+With youuuuuuuu I've realized that maybe love is also much quieter
+than that. Sometimes it's just having someone you instinctively
+want to tell things to.
+</p>
+
+<p class="letterParagraph">
+It's seeing something funny and immediately thinking,
+“I need to send this to him”.
+</p>
+
+<p class="letterParagraph">
+It's having a terrible day and somehow feeling a little lighter
+after talking to the same person.
+</p>
+
+<p class="letterParagraph">
+It's knowing that there is someone somewhere who has slowly
+become a familiar little corner of your life.
+</p>
+
+<p class="letterParagraph">
+It's remembering tiny details about each other.
+</p>
+
+<p class="letterParagraph">
+It's laughing at jokes that would make absolutely no sense
+to anyone else.
+</p>
+
+<p class="letterParagraph">
+It's being able to be completely stupid together.
+</p>
+
+<p class="letterParagraph">
+And maybe most importantly, it's feeling like you don't always
+have to be impressive or perfect. You can just exist.
+</p>
+
+<p class="letterParagraph">
+And I love that I can exist around you. I can be annoying.
+I can be dramatic. I can send you the most random things.
+I can talk nonsense for absolutely no reason. I can bother you.
+I can make the same joke seventeen times. I can tell you about
+the smallest thing that happened during my day. I can be happy,
+irritated, emotional, excited, sleepy, chaotic, or completely weird
+and somehow you're still you.
+</p>
+
+<p class="letterParagraph">
+And I hope you know that I don't love only the big, obvious parts
+of you. I love the tiny pieces too. The random way you talk.
+The things you get passionate about. The way you can be such a
+chatpata mard one second and my glittery pink wing fairy the next.
+The way you annoy me and then somehow make me laugh when I'm trying
+to stay annoyed. Your football obsession. Your ragebaiting addiction.
+Your jokes. The version of you that everyone sees, and the little
+pieces of you that only come out when you're comfortable. I don't
+want to only love the perfect version of you. I want to know more
+and love the real you in the same way.
+</p>
+
+<p class="letterParagraph">
+Ayan, I really hope you know how much comfort you have become for me.
+You're not just my boyfriend. You're my best friend too. And I think
+that is one of my favourite things about us. Because I don't only
+want to tell you about the romantic things. I want to tell you about
+the stupid things. I want to send you random thoughts. I want to tell
+you about something that happened five minutes ago. I want to complain
+to you. I want to celebrate tiny victories with you. I want to laugh
+with you until we can't breathe. I want to have those completely
+unnecessary conversations that somehow become the best conversations.
+Somewhere between all our jokes and flirting and teasing, you've
+become someone whose presence genuinely matters to me.
+</p>
+
+<p class="letterParagraph">
+And I don't say that lightly. There are people we meet and forget.
+There are people we meet and remember. And then there are people
+who quietly become a part of the way we experience life. You're that
+person for me. You have somehow become a part of my days without
+even trying.
+</p>
+
+<p class="letterParagraph">
+And if I could go back to 6th April and tell that version of me
+what was about to happen, she probably wouldn't believe me. If I
+told her that the random boy asking “koi match dekh rha hai?”
+would become AYANU....the person I'd end up writing an entire letter
+to....she would probably laugh at me. And honestly, I'm glad she
+didn't know. Because I got to experience it naturally. I got to
+watch a stranger become a friend. A friend become my favourite person.
+And my favourite person become my boyfriend. And somewhere in between
+all of that, you became home in a way I never expected.
+</p>
+
+<p class="letterParagraph">
+Not the kind of home that is a place. The kind that is a person you
+can return to after a long day. A person you can be completely yourself
+around. A person whose presence makes things feel a little less heavy.
+And I hope, in some way, I can be that for you too.
+</p>
+
+<p class="letterParagraph">
+I hope you know that you never have to be a certain version of yourself
+around me just to be loved. You don't have to constantly make me laugh.
+You don't have to always know the right thing to say. You don't have
+to be perfect. Just be you.
+</p>
+
+<p class="letterParagraph">
+My gawaruddin. My neem ke pakode. My chatpate mard.
+My glittery pink wing fairy. My favourite footballer.
+My favourite ragebaiter. My best friend. My comfort place. My Ayanu.
+</p>
+
+<p class="letterParagraph">
+And yes, unfortunately for you....you're stuck with all these names
+now....hehehe.
+</p>
+
+<p class="letterParagraph">
+I also want you to know that I am so grateful for the timing of us.
+Because maybe if we'd talked two years ago, we wouldn't have become us.
+Maybe if we'd met earlier, we'd have remained strangers. Maybe if that
+one random group conversation had happened on a different day.....
+everything would have been different. But it happened exactly when
+it did. And then somehow everything after that just kept unfolding.
+</p>
+
+<p class="letterParagraph">
+So maybe the red string really was there. Maybe it was just quietly
+waiting. Waiting through all those days when we lived so close and
+didn't know each other. Waiting through every almost meeting.
+Waiting until one random “koi match dekh rha hai?” finally pulled
+the string tight enough for us to notice each other. And if that's
+true then I hope we never forget how unlikely and beautiful our
+beginning was.
+</p>
+
+<p class="letterParagraph">
+I don't know what every single year ahead of us is going to look like.
+I don't know what we'll become, where we'll go, how much we'll change,
+or how different life will be. But I do know that right now, in this
+little chapter of our lives, I am incredibly grateful that you're here.
+And whenever I look back at 2026, I know I'm going to remember this
+year differently because of you. I'll remember the beginning.
+I'll remember the jokes. I'll remember the chaos. I'll remember the
+stupid arguments. I'll remember the late conversations. I'll remember
+the feeling of slowly realizing that “oh” “Oh, this person is actually
+becoming really important to me.”
+</p>
+
+<p class="letterParagraph">
+And I hope when you look back someday, you remember me like that too.
+Not just as your girlfriend. But as the girl who somehow went from
+replying “mee no” to becoming completely obsessed with one particular
+gawaruddin. The girl who gave you approximately seventeen ridiculous
+nicknames. The girl who will probably continue annoying you for an
+unreasonable amount of time. The girl who genuinely wants to know
+every version of you. The girl who will always have something random
+to tell you. The girl who thinks you're ridiculously special even
+when you're being absolutely unbearable. And most importantly, the
+girl who is really, really grateful that out of all the people in
+this enormous world, somehow our paths crossed.
+</p>
+
+<p class="letterParagraph">
+So, Happy Boyfriend's Day, my Ayanu. Thank you for becoming my
+favourite person without even realizing it. Thank you for every laugh,
+every conversation, every stupid moment, every little memory, every
+time you've made an ordinary day feel less ordinary. Thank you for
+being my best friend and my boyfieeee. And thank you for being exactly
+the person you are.
+</p>
+
+<p class="letterParagraph">
+I hope we keep collecting stupid memories. I hope we keep annoying
+each other. I hope we keep laughing at things nobody else understands.
+I hope we keep having those random conversations that start with
+absolutely nothing and somehow end with us talking for hours.
+I hope we keep choosing each other in all the small ways. And I hope
+that years from now, when we look back at this letter, we'll laugh
+at how young we were, how dramatic we were, how many ridiculous
+nicknames you had, and how neither of us could have possibly known
+where that first “mee no” would take us.
+</p>
+
+<p class="letterParagraph">
+But I also hope we'll smile because we'll remember that once upon a
+time, two people who had lived in the same place for years without
+even noticing each other finally found their way into the same
+conversation. And then into each other's lives. And then somehow...
+into each other's hearts.
+</p>
+
+<p class="letterParagraph">
+Happy Boyfriend's Day, myyyyy AYANUUUU And Happy Anniversary too.....
+we have completed 2 months together!!!!. 💗
+</p>
+
+<p class="letterParagraph">
+My best friend. My comfort place. My favourite human. My footballer.
+My ragebaiter. My chatpate mard. My glittery pink wing fairy.
+My gawaruddin. And unfortunately for you... MY BOYFIEEEEEE. 🫵🏻💗
+</p>
+
+<div class="letterEnding">
+I love youuuuu, idiot.<br>
+More than all the stupid words I could fit into this letter.<br>
+And if the invisible red string theory is right...<br>
+I'm really, really glad mine led me to you. ❤️
+<br><br>
+— your baccha ♡
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- THINGS I LOVE -->
+<div id="loveSection" class="hiddenSection">
+
+<button class="backButton" onclick="goHome()">← Back</button>
+
+<div class="sectionCard">
+<p class="sectionSubtitle">25 LITTLE REASONS</p>
+<h2>Things I Love About You 🫶</h2>
+
+<div class="reasonGrid">
+
+<div class="reasonCard" onclick="showModal('Your Smile','Because somehow your smile can make even an ordinary moment feel a little nicer. 💗')"><div class="emoji">😊</div>Your Smile</div>
+
+<div class="reasonCard" onclick="showModal('Your Laugh','Your laugh is one of those little things I could probably recognize anywhere.')"><div class="emoji">😂</div>Your Laugh</div>
+
+<div class="reasonCard" onclick="showModal('Your Voice','There is just something about hearing you that instantly feels familiar.')"><div class="emoji">🎀</div>Your Voice</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Talk','Especially when you get excited about something and suddenly have SO much to say. 😭')"><div class="emoji">💬</div>The Way You Talk</div>
+
+<div class="reasonCard" onclick="showModal('Your Sense of Humour','Your jokes are questionable sometimes... but unfortunately I still laugh. 😭')"><div class="emoji">🤣</div>Your Sense of Humour</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Annoy Me','You somehow know exactly how to annoy me and make me smile at the same time.')"><div class="emoji">😌</div>The Way You Annoy Me</div>
+
+<div class="reasonCard" onclick="showModal('Your Random Messages','The completely random messages that appear out of nowhere are secretly my favourites.')"><div class="emoji">💌</div>Your Random Messages</div>
+
+<div class="reasonCard" onclick="showModal('Your Little Habits','The tiny things you do without thinking are some of the things I notice most.')"><div class="emoji">🌷</div>Your Little Habits</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Remember Tiny Things','I love that you remember little details that I don’t even expect you to remember.')"><div class="emoji">🫶</div>The Way You Remember Tiny Things</div>
+
+<div class="reasonCard" onclick="showModal('Your Football Obsession','Even though I may not understand every football thing, I love seeing you get excited about it.')"><div class="emoji">⚽</div>Your Football Obsession</div>
+
+<div class="reasonCard" onclick="showModal('Your Protective Side','That little side of you that makes me feel cared for is genuinely special.')"><div class="emoji">🛡️</div>Your Protective Side</div>
+
+<div class="reasonCard" onclick="showModal('Your Goofy Side','I love the completely unserious, goofy version of you that comes out around me.')"><div class="emoji">🐣</div>Your Goofy Side</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Make Boring Conversations Fun','Somehow even the most random conversation becomes fun when it’s with you.')"><div class="emoji">✨</div>The Way You Make Boring Conversations Fun</div>
+
+<div class="reasonCard" onclick="showModal('Your Patience With Me','Especially when I’m being dramatic, chaotic, or just... me. 😭')"><div class="emoji">🌸</div>Your Patience With Me</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Listen','I love knowing that I can tell you even the smallest random thing.')"><div class="emoji">👂</div>The Way You Listen</div>
+
+<div class="reasonCard" onclick="showModal('Your Random Rants','Your random rants are basically tiny windows into your brain and I love them.')"><div class="emoji">🗣️</div>Your Random Rants</div>
+
+<div class="reasonCard" onclick="showModal('Your Reactions','Your reactions to things are sometimes funnier than the actual thing.')"><div class="emoji">🥹</div>Your Reactions</div>
+
+<div class="reasonCard" onclick="showModal('Your Nicknames For Me','Even the silly ones have somehow become little pieces of our thing.')"><div class="emoji">💗</div>Your Nicknames For Me</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Make Me Laugh Without Trying','Sometimes you literally do nothing and somehow I am already smiling.')"><div class="emoji">🤣</div>The Way You Make Me Laugh Without Trying</div>
+
+<div class="reasonCard" onclick="showModal('How Comfortable I Feel Talking To You','I can be completely random and unfiltered with you, and that means a lot to me.')"><div class="emoji">🏠</div>How Comfortable I Feel Talking To You</div>
+
+<div class="reasonCard" onclick="showModal('The Way You Can Turn My Mood Around','One message from you can sometimes change the whole vibe of my day.')"><div class="emoji">🌈</div>The Way You Can Turn My Mood Around</div>
+
+<div class="reasonCard" onclick="showModal('Your “I Don’t Care” Face','That face is SO funny because sometimes you clearly care and we both know it. 😭')"><div class="emoji">👀</div>Your “I Don't Care” Face</div>
+
+<div class="reasonCard" onclick="showModal('You Make Me Want To Tell You Everything','You’re one of the first people I want to tell when something happens.')"><div class="emoji">💌</div>You Make Me Want To Tell You Everything</div>
+
+<div class="reasonCard" onclick="showModal('You Make Even My Most Stupid Thoughts Worth Sharing','Even my most random nonsense somehow feels worth sending when it’s to you.')"><div class="emoji">🧠</div>You Make Even My Most Stupid Thoughts Worth Sharing</div>
+
+<div class="reasonCard" onclick="showModal('Everything','Because after all the little reasons, sometimes the simplest answer is just... everything. 💗')"><div class="emoji">💗</div>Everything</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- OPEN WHEN -->
+<div id="openwhenSection" class="hiddenSection">
+
+<button class="backButton" onclick="goHome()">← Back</button>
+
+<div class="sectionCard">
+<p class="sectionSubtitle">FOR DIFFERENT LITTLE MOMENTS</p>
+<h2>Open When... 💭</h2>
+
+<div class="openWhenGrid">
+
+<button class="openCard" onclick="showOpenWhen('Open When You’re Sad 🩵',sadLetter)">
+<strong>🩵 Open when...</strong>
+you're sad
+</button>
+
+<button class="openCard" onclick="showOpenWhen('Open When You Miss Me 💌',missLetter)">
+<strong>💌 Open when...</strong>
+you miss me
+</button>
+
+<button class="openCard" onclick="showOpenWhen('Open When You’ve Had a Bad Day 🌧️',badDayLetter)">
+<strong>🌧️ Open when...</strong>
+you've had a bad day
+</button>
+
+<button class="openCard" onclick="showOpenWhen('Open When You Can’t Sleep 🌙',sleepLetter)">
+<strong>🌙 Open when...</strong>
+you can't sleep
+</button>
+
+<button class="openCard" onclick="showOpenWhen('Open When You Need To Laugh 😂',laughLetter)">
+<strong>😂 Open when...</strong>
+you need to laugh
+</button>
+
+<button class="openCard" onclick="showOpenWhen('Open When You Just Want To Feel Loved 🫶',lovedLetter)">
+<strong>🫶 Open when...</strong>
+you just want to feel loved
+</button>
+
+</div>
+</div>
+</div>
+
+
+<!-- SONGS -->
+<div id="songsSection" class="hiddenSection">
+
+<button class="backButton" onclick="goHome()">← Back</button>
+
+<div class="sectionCard">
+<p class="sectionSubtitle">SONGS THAT SOMEHOW BECAME ABOUT YOU</p>
+<h2>Our Playlist 🎧</h2>
+
+<div class="songList">
+
+<div class="song"><div class="songTitle">🎵 Paper Rings</div><div class="songReason">Taylor Swift</div></div>
+
+<div class="song"><div class="songTitle">🎵 Tera Hone Laga Hoon</div><div class="songReason">Atif Aslam</div></div>
+
+<div class="song"><div class="songTitle">🎵 Tera Naam Doon</div><div class="songReason">Atif Aslam</div></div>
+
+<div class="song"><div class="songTitle">🎵 Can't Help Falling in Love</div><div class="songReason">Elvis Presley</div></div>
+
+<div class="song"><div class="songTitle">🎵 Abhi Kuchh Dino Se</div><div class="songReason">Pritam</div></div>
+
+<div class="song"><div class="songTitle">🎵 Hona Tha Pyaar</div><div class="songReason">Atif Aslam</div></div>
+
+<div class="song"><div class="songTitle">🎵 Call It What You Want</div><div class="songReason">Taylor Swift</div></div>
+
+<div class="song"><div class="songTitle">🎵 Daylight</div><div class="songReason">Taylor Swift</div></div>
+
+<div class="song" style="text-align:center">
+<div class="songTitle">♡ and many more... ♡</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- AYAN FORMULA -->
+<div id="formulaSection" class="hiddenSection">
+
+<button class="backButton" onclick="goHome()">← Back</button>
+
+<div class="sectionCard">
+
+<p class="sectionSubtitle">A VERY SERIOUS SCIENTIFIC DISCOVERY</p>
+<h2>The Ayan Formula 🧪</h2>
+
+<div class="formulaBox">
+
+<span>Ayan</span>
++
+<span>Smile</span>
++
+<span>Chaos</span>
++
+<span>Cutie Energy</span>
+
+<br>
+
+÷
+
+<span>Normal Behaviour</span>
+
+<br>
+
+=
+
+<span>100% Ayanu</span> 💗
+
+</div>
+
+<button class="calculateButton" onclick="calculateFormula()">
+Calculate Result 🧪
+</button>
+
+<div id="formulaResult"></div>
+
+</div>
+</div>
+
+
+<!-- FINAL SURPRISE -->
+<div id="surpriseSection" class="hiddenSection">
+
+<button class="backButton" onclick="goHome()">← Back</button>
+
+<div class="sectionCard">
+
+<p class="sectionSubtitle">YOU MADE IT TO THE END...</p>
+<h2>One Last Thing 🎁</h2>
+
+<div class="secretBox">
+
+<div class="bigHeart">💗</div>
+
+<p style="margin-top:20px">
+There's actually one more thing hidden here...
+</p>
+
+<button class="revealButton" onclick="revealSecret()">
+Open Your Final Surprise ✨
+</button>
+
+<div id="secretMessage">
+
+<div class="finalLetter">
+
+<p>Heyyy bhonduuu,</p>
+
+<p>
+So... you actually made it till the end. 🥹💗
+</p>
+
+<p>
+By now, almost everything I wanted to tell you is already somewhere
+on this little website — in my letter, in all the things I love
+about you and in all those little “open when” letters.
+</p>
+
+<p>
+I just wanted to take all those tiny things that make me think of
+you and put them in one place. Because somehow you are in so many
+little things now. In songs, in random things I see, in phrases,
+in stupid little moments, and sometimes just in my brain going,
+“ayanu.” 😭
+</p>
+
+<p>
+Right now, we are still making all these little memories. We are
+still learning each other's weird habits, annoying each other,
+laughing at things that probably make absolutely no sense to anyone
+else, and creating more reasons for me to smile randomly.
+</p>
+
+<p>
+I don't know exactly what the future is going to look like, and I
+don't think we need to know. Maybe one day we will look back at this
+and laugh about how cheesy I was. Maybe there will be so many more
+memories, songs, inside jokes, nicknames and stories that this little
+website won't even be enough to hold them all.
+</p>
+
+<p>
+But for now I just want to enjoy what we have right here. This moment.
+Us. The stupid conversations, the random laughs, the little things,
+and everything in between.
+</p>
+
+<p>
+No dramatic promises. No perfectly written future. Just us taking
+things one day at a time and collecting more little moments along
+the way.
+</p>
+
+<p>
+And for now...
+</p>
+
+<p>
+I am just really glad it's you. 💗
+</p>
+
+<p>
+Happy Boyfriend's Day, my bhondu.
+</p>
+
+<p>
+I love youuu 3000 &gt;3. 🫶🏻
+</p>
+
+<p>
+— your baccha
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+<div class="modalContent">
+
+<h3 id="modalTitle"></h3>
+
+<p id="modalText"></p>
+
+<button class="closeButton" onclick="closeModal()">
+Close 💗
+</button>
+
+</div>
+</div>
+
+
+<script>
+
+/* CODE LOCK */
+let enteredCode="";
+const secretCode="0310";
+
+function press(number){
+if(enteredCode.length<4){
+enteredCode+=number;
+document.getElementById("codeDisplay").innerText=
+"• ".repeat(enteredCode.length);
+}
+}
+
+function clearCode(){
+enteredCode="";
+document.getElementById("codeDisplay").innerText="• • • •";
+document.getElementById("message").innerText="";
+}
+
+function checkCode(){
+if(enteredCode===secretCode){
+document.getElementById("loginBox").style.display="none";
+document.getElementById("mainWebsite").style.display="block";
+}else{
+document.getElementById("message").innerText=
+"Hmm... wrong code 👀 Try again.";
+enteredCode="";
+document.getElementById("codeDisplay").innerText="• • • •";
+}
+}
+
+
+/* SECTIONS */
+const sections=[
+"letterSection",
+"loveSection",
+"openwhenSection",
+"songsSection",
+"formulaSection",
+"surpriseSection"
+];
+
+function hideAllSections(){
+sections.forEach(id=>{
+document.getElementById(id).style.display="none";
+});
+}
+
+function openSection(section){
+
+hideAllSections();
+document.getElementById("mainWebsite").style.display="none";
+
+const sectionMap={
+letter:"letterSection",
+love:"loveSection",
+openwhen:"openwhenSection",
+songs:"songsSection",
+formula:"formulaSection",
+surprise:"surpriseSection"
+};
+
+document.getElementById(sectionMap[section]).style.display="block";
+window.scrollTo(0,0);
+}
+
+function goHome(){
+hideAllSections();
+document.getElementById("mainWebsite").style.display="block";
+window.scrollTo(0,0);
+}
+
+
+/* MODAL */
+function showModal(title,text){
+document.getElementById("modalTitle").innerText=title;
+document.getElementById("modalText").innerText=text;
+document.getElementById("modal").style.display="flex";
+}
+
+function showOpenWhen(title,text){
+showModal(title,text);
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+document.getElementById("modal").addEventListener("click",function(e){
+if(e.target===this)closeModal();
+});
+
+
+/* AYAN FORMULA */
+function calculateFormula(){
+document.getElementById("formulaResult").innerText=
+"⚠️ ERROR: Too much cuteness detected. 💗";
+}
+
+
+/* FINAL SURPRISE */
+function revealSecret(){
+document.getElementById("secretMessage").style.display="block";
+}
+
+
+/* OPEN WHEN LETTERS */
+
+const sadLetter=`Heyyy bhonduuu,
+
+You don't always have to be okay bacchuuuuu. Sometimes you're allowed to have a bad day, feel low, be quiet, or just not feel like doing anything.
+
+I know I can't magically fix everything, but I hope you know that you don't have to deal with everything alone.
+
+If I could, I'd probably just sit beside you, annoy you approximately 100 times a day until you finally smile, and then act like I did absolutely nothing. 😭
+
+Whatever is making you sad right now, please take it one little thing at a time. You don't have to figure everything out immediately.
+
+And remember that there is someone here who genuinely cares about you, listens to you and will always be happy to hear your random rants.
+
+So breathe, take your time, drink some water, and please remember...
+
+you're my bhonduuu and you're loved. Very, very much. 💗
+
+— your baccha`;
+
+const missLetter=`Heyyy bhonduuu,
+
+So you miss meee? 😭
+
+First of all, same.
+
+I know sometimes you just randomly wish I was there, or you want to talk to me and I'm not around. So consider this your tiny little piece of me for that moment.
+
+Think about all our stupid conversations, random jokes, annoying each other, and all those tiny moments that somehow became memories.
+
+And if you really miss me, just remember that somewhere, I'm probably thinking about you too.
+
+Maybe not at the exact same second because unfortunately I cannot read your mind 😭 but you're definitely somewhere in my thoughts.
+
+So until we can talk again, just keep this little letter with you.
+
+And don't miss me approximately 100 times more than I miss you because I WILL win. 😭💗
+
+— your baccha`;
+
+const badDayLetter=`Heyyy bhonduuu,
+
+Okay. Bad day?
+
+Then first, congratulations on surviving it. 😭
+
+Whatever happened today, it's over now. You don't have to carry every annoying thing that happened throughout the whole night.
+
+Take a breath. Change into something comfortable. Eat something nice. Listen to something you like. Stare at the ceiling whatever makes your brain feel a little quieter.
+
+And please don't be too hard on yourself.
+
+One bad day doesn't suddenly erase all the good things about you.
+
+Tomorrow is another day, and you can deal with it when it actually gets here.
+
+For now, just rest.
+
+And if nothing else works, remember that your baccha is always ready to annoy you until you smile again. 😭💗
+
+— your baccha`;
+
+const sleepLetter=`Heyyy bhonduuu,
+
+Can't sleep?
+
+Well... welcome to the club. 😭
+
+If your brain has decided that tonight is the perfect time to think about every random thing that has ever happened, please tell it to calm down.
+
+You don't have to solve every problem tonight.
+
+Whatever you're thinking about can wait until tomorrow.
+
+Close your eyes, get comfortable, put your phone away for a little while and just let yourself rest.
+
+And if your brain is still being annoying, think about something nice.
+
+Maybe one of our stupid conversations.
+
+Maybe one of the random things that made us laugh.
+
+Maybe literally anything except whatever is stressing you out right now. 😭
+
+Goodnight, bhonduuu.
+
+Sleep properly, okay?
+
+— your baccha`;
+
+const laughLetter=`Heyyy bhonduuu,
+
+If you're opening this because you need to laugh, then unfortunately I have no idea what I'm supposed to write here because apparently I'm expected to be funny on command. 😭
+
+So instead, remember all the completely stupid things we have said to each other.
+
+The jokes that made absolutely no sense to anyone else but somehow made us laugh.
+
+The random conversations that started normally and somehow became complete nonsense.
+
+The times one of us said something so stupid that the other couldn't stop laughing.
+
+Basically, our combined braincells are questionable.
+
+And honestly?
+
+That's one of my favourite things about us.
+
+So smileeeee.
+
+Even just a tiny one.
+
+There. Mission accomplished. 😌💗
+
+— your baccha`;
+
+const lovedLetter=`Heyyy bhonduuu,
+
+If you're reading this because you just want to feel loved for a little while, then here you go.
+
+You are loved.
+
+Not because you did something amazing today.
+
+Not because you made someone laugh.
+
+Not because you were productive.
+
+Just because you're you.
+
+You don't have to earn care or attention by being perfect.
+
+You can have weird days.
+
+You can be annoying.
+
+You can be childish.
+
+You can be quiet.
+
+You can be completely yourself.
+
+And somehow, I will still look at you and think, yep... that's my bhondu. 😭💗
+
+I hope you never forget that there is someone who notices the little things about you, remembers your random habits, listens to your rants and thinks about you approximately 100 times a day.
+
+So whenever you need a reminder...
+
+here it is.
+
+You are cared for.
+
+You are appreciated.
+
+You are loved.
+
+A lot.
+
+— your baccha`;
+
+</script>
+
+</body>
+</html>
